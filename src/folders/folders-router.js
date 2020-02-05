@@ -32,9 +32,11 @@ FoldersService.getAll(req.app.get('db'))
         newFolder
       )
         .then(folder => {
+         
           res
             .status(201)
-            .location(path.posix.join(req.originalUrl, `/${folder.id}`))
+            
+            .location(req.originalUrl+`/${folder.id}`)
             .json(folder)
         })
         .catch(next)

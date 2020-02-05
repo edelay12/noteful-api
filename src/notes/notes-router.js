@@ -33,7 +33,7 @@ NotesService.getAll(req.app.get('db'))
       .then(note => {
         res
           .status(201)
-          .location(path.posix.join(req.originalUrl, `/${note.id}`))
+          .location(req.originalUrl) // +`/${note.id}`
           .json(note)
       })
       .catch(next)
