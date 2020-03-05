@@ -1,4 +1,4 @@
-INSERT INTO notes_table (name, content, folderNum)
+INSERT INTO notes_table (name, content, foldernum)
 VALUES 
 ('note1', 'content... 1' , 1),
 ('note2', 'content... 2' , 1),

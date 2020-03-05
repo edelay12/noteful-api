@@ -6,7 +6,6 @@ const jsonParser = express.json()
 
 notesRouter
   .route('/notes')
-
   .get((req, res, next) => {
 NotesService.getAll(req.app.get('db'))
     .then( notes => {
